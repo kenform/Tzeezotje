@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Tzeezotje</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230926213111">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<picture><source srcset="img/logo-header.webp" type="image/webp"><img src="img/logo-header.png" alt="Logo" /></picture>
+				</a>
+
+				<div class="header__menu menu">
+
+					<div data-da=".header__container,767.98" type="button" class="menu__icon icon-menu burger cross menu--1 ">
+
+						<label>
+							<input type="checkbox">
+							<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="50" cy="50" r="30" />
+								<path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+								<path class="line--2" d="M0 50h70" />
+								<path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+							</svg>
+						</label>
+
+
+					</div>
+
+
+					<!-- <div class="burger cross menu--2">
+  	<label>
+  		<input type="checkbox">
+  		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  			<circle cx="50" cy="50" r="30" />
+  			<path class="line--1" d="M0 70l28-28c2-2 2-2 7-2h64" />
+  			<path class="line--2" d="M0 50h99" />
+  			<path class="line--3" d="M0 30l28 28c2 2 2 2 7 2h64" />
+  		</svg>
+  	</label>
+  </div>
+  <div class="burger back menu--3">
+  	<label>
+  		<input type="checkbox">
+  		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  			<circle cx="50" cy="50" r="30" />
+  			<path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55" />
+  			<path class="line--2" d="M0 50h80" />
+  			<path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45" />
+  		</svg>
+  	</label>
+  </div>
+  <div class="burger back menu--4">
+  	<label>
+  		<input type="checkbox">
+  		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  			<circle cx="50" cy="50" r="30" />
+  			<path class="line--1" d="M0 55l14-10c4.7-3.3 9-5 13-5h72" />
+  			<path class="line--2" d="M0 50h99" />
+  			<path class="line--3" d="M0 45l14 10c4.7 3.3 9 5 13 5h72" />
+  		</svg>
+  	</label>
+  </div> -->
+
+
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li data-goto-header data-goto=".page__events" class="menu__item">
+								<a href="#" class="menu__link">
+									<span> À la carte</span></a>
+							</li>
+							<li data-goto-header data-goto=".page__reviews" class="menu__item">
+								<a href="#" class="menu__link">Wijnkaart</a>
+							</li>
+							<li data-goto-header data-goto=".page__dishes" class="menu__item">
+								<a href="#" class="menu__link">Lunchmenu</a>
+							</li>
+							<li data-goto-header data-goto=".page__contacts" class="menu__item"><a href="#" class="menu__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div data-da=".menu__body,767.98" class="header__actions actions-header">
+					<div class="actions-header__body">
+						<div class="actions-header__icon">
+							<img src="img/svg/phone-header.svg" alt="phone icon" />
+						</div>
+						<a class="actions-header__phone" href="tel:+3292825725" alt="phone">+32 9 282 57 25</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close "><span class="icon-popup"></span></button>
+					<div class="popup__text">
+						<form data-popup-message="#form-message" data-dev action="files/sendmail/sendmail.php" method="POST" class="form__body">
+							<h1 class="form__title">Отправка данных на почту</h1>
+							<div class="form__item">
+
+								<label for="formName" class="form__label">Имя*:</label>
+								<input data-error="Вы ничего не ввели.." data-validate id="formName" type="text" name="name" class="form__input">
+							</div>
+
+							<div class="form__item">
+								<label for="formEmail" class="form__label">E-mail*:</label>
+								<input data-error="Введен неверный E-mail" data-validate data-required="email" id="formEmail" type="text" name="email" class="form__input">
+							</div>
+
+							<div class="form__item">
+								<label for="formMessage" class="form__label">Сообщение:</label>
+								<textarea data-autoheight name="message" id="formMessage" class="form__input"></textarea>
+							</div>
+
+							<div class="form__item">
+								<div class="checkbox">
+									<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных
+											данных в
+											соответствии с <a href="">Условиями</a>*</span></label>
+								</div>
+							</div>
+							<button type="submit" class="form__button">Send</button>
+
+						</form>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="form-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content _message">
+					<button data-close type="button" class="popup__close "><span class="icon-popup"></span></button>
+					<div class="popup__text">
+						<form data-popup-message="#form-message" method="POST" class="form__body">
+							<h1 class="form__title">Сообщение успешно отправлено!</h1>
+
+						</form>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<section class="page__main main-block">
+				<div class="main-block__container">
+					<div class="main-block__content">
+						<div class="main-block__shedule title">
+							<p>OPEN EVERYDAY 6AM - 9PM</p>
+						</div>
+						<div class="main-block__tagline">
+							<h1>
+								A bad day with lunch is better than a good day without it.
+							</h1>
+						</div>
+						<div class="main-block__actions actions-main">
+							<button data-popup="#popup" class="actions-main__button button button-open" type="submit" class="button">
+								Reserve a table
+
+							</button>
+
+							<div data-da=".menu__body,767.98" class="actions-main__socials socials-main">
+								<div class="socials-main__item">
+									<img src="img/svg/facebook-intro.svg" alt="icon facebook" />
+								</div>
+								<div class="socials-main__item">
+									<img src="img/svg/instagram-intro.svg" alt="icon instagram" />
+								</div>
+								<div class="socials-main__item">
+									<img src="img/svg/twitter-intro.svg" alt="icon twitter" />
+								</div>
+								<div class="socials-main__item">
+									<img src="img/svg/Youtube-intro.svg" alt="icon youtube" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <button class="btn btn-primary btn-ghost btn-open">
+  	Open
+  </button>
+  <button class="btn btn-primary btn-ghost btn-close">
+  	Close
+  </button>
+  <button class="btn btn-primary btn-ghost btn-slash">
+  	Slash
+  </button>
+  <button class="btn btn-primary btn-ghost btn-fill-up">
+  	Fill Up
+  </button>
+  <button class="btn btn-primary btn-ghost btn-slide">
+  	Slide
+  </button>
+  <button class="btn btn-primary btn-ghost btn-through">
+  	Through
+  </button> -->
+			<section class="page__events events">
+				<div class="events__container">
+					<div class="events__content">
+						<div class="events__schedule schedule-events">
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Woensdag 12/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Salade met Serrano
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Steak Tartaar
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Donderdag 13/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Toast Roquefort
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Vrijdag 14/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Verrassing van de Chef
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Vrijdag 15/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Verrassing van de Chef
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Vrijdag 16/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Verrassing van de Chef
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div data-coefficient="100" data-prlx data-direction="1" data-prlx-parent class="events__images image-block ">
+						<div data-prlx-mouse data-prlx-cx="300" data-prlx-cy="300" data-prlx-a="100" class="image-block__square">
+						</div>
+						<div data-prlx class="image-block__item_1 ">
+							<picture><source srcset="img/Events/1.webp" type="image/webp"><img src="img/Events/1.png" alt="Image" /></picture>
+						</div>
+						<div data-prlx class="image-block__item_2 ">
+							<picture><source srcset="img/Events/2.webp" type="image/webp"><img src="img/Events/2.png" alt="Image" /></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__reviews reviews">
+				<div class="reviews__container">
+					<!-- Оболонка слайдера -->
+					<div class="reviews__slider swiper swiper-reviews">
+						<!-- Частина слайдера, що рухається -->
+						<div class="reviews__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__content">
+									<div class="reviews__quotes">
+										<picture><source srcset="img/Reviews/quotes.webp" type="image/webp"><img src="img/Reviews/quotes.png" alt=""></picture>
+									</div>
+									<h4 class="reviews__title">
+										Goede service, lekker eten, toffe ambiance
+										<h4 />
+										<div class="reviews__text">
+											<p>
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+												sed diam nonumy eirmod tempor invidunt ut labore et
+												dolore magna aliquyam erat, sed diam voluptua. At vero
+												eos et accusam et justo duo dolores et ea rebum. Stet
+												clita kasd gubergren.
+											</p>
+										</div>
+										<div class="reviews__author">
+											<p>ALAIN HEYNDRICKX</p>
+										</div>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__content">
+									<div class="reviews__quotes">
+										<picture><source srcset="img/Reviews/quotes.webp" type="image/webp"><img src="img/Reviews/quotes.png" alt=""></picture>
+									</div>
+									<h4 class="reviews__title">
+										Goede service, lekker eten, toffe ambiance
+										<h4 />
+										<div class="reviews__text">
+											<p>
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+												sed diam nonumy eirmod tempor invidunt ut labore et
+												dolore magna aliquyam erat, sed diam voluptua. At vero
+												eos et accusam et justo duo dolores et ea rebum. Stet
+												clita kasd gubergren.
+											</p>
+										</div>
+										<div class="reviews__author">
+											<p>ALAIN HEYNDRICKX</p>
+										</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+						<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="page__dishes dishes">
+				<div class="dishes__container">
+					<div class="dishes__items">
+						<div data-prlx-parent class="dishes__item item-dishes">
+							<div class="item-dishes__body">
+								<h4 class="item-dishes__title">
+									LEKKER ETEN
+									<span></span>
+								</h4>
+								<div class="item-dishes__text">
+									<p>Eten gaat niet over indruk maken op mensen. Het gaat erom dat ze zich op hun gemak voelen. Dat is
+										onze
+										filosofie, goed eten in een goede sfeer.</p>
+								</div>
+							</div>
+							<div data-prlx class="item-dishes__image -ibg">
+								<picture><source srcset="img/Dishes/1.webp" type="image/webp"><img src="img/Dishes/1.png" alt=""></picture>
+							</div>
+						</div>
+						<div data-prlx-parent class="dishes__item item-dishes">
+							<div class="item-dishes__body">
+								<h4 class="item-dishes__title">
+									TOFFE AMBIANCE
+									<span></span>
+								</h4>
+								<div class="item-dishes__text">
+									<p>Het creëren van de juiste sfeer is zeer belangrijk voor ons. We nemen onze tijd om te zorgen dat
+										alle
+										elementen bijdragen aan de juiste setting.</p>
+								</div>
+							</div>
+							<div data-prlx class="item-dishes__image -ibg">
+								<picture><source srcset="img/Dishes/2.webp" type="image/webp"><img src="img/Dishes/2.png" alt=""></picture>
+							</div>
+						</div>
+						<div data-prlx-parent class="dishes__item item-dishes">
+							<div class="item-dishes__body">
+								<h4 class="item-dishes__title">
+									LEKKERE COCKTAILS
+									<span></span>
+								</h4>
+								<div class="item-dishes__text">
+									<p>Ons doel is simpel: een gastvrije plek bieden waar u kunt genieten van een onvergetelijke cocktail,
+										een goed
+										gesprek en lekker eten.</p>
+								</div>
+							</div>
+							<div data-prlx class="item-dishes__image -ibg">
+								<picture><source srcset="img/Dishes/3.webp" type="image/webp"><img src="img/Dishes/3.png" alt=""></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__gallery">
+				<div class="page__gallery-main">
+					<div class="gallery__container">
+						<div class="gallery__content">
+							<div class="gallery__body">
+								<div class="gallery__title">
+									<h4>Sfeerfoto's</h4>
+								</div>
+								<div class="gallery__subtitle">
+									<p>De beste manier om de sfeer te ervaren is eens langskomen.
+										In tussentijd hebben we hier alvast wat foto’s voor je klaar.</p>
+								</div>
+
+								<button data-da=".gallery__slider,767.98" type="button" class="swiper-button-prev"></button>
+								<button data-da=".gallery__slider,767.98" type="button" class="swiper-button-next"></button>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Оболонка слайдера -->
+
+				<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+				<div class="gallery__slider swiper-gallery swiper ">
+					<!--  Часть слайдера, которая движется-->
+					<div class="gallery__wrapper swiper-wrapper image-slider">
+
+						<div class="gallery__slide swiper-slide image-slider -ibg">
+							<picture><source srcset="img/Slider/2.webp" type="image/webp"><img src="img/Slider/2.png" alt=""></picture>
+						</div>
+						<div class="gallery__slide swiper-slide image-slider -ibg">
+							<picture><source srcset="img/Slider/1.webp" type="image/webp"><img src="img/Slider/1.png" alt=""></picture>
+						</div>
+						<div class="gallery__slide swiper-slide image-slider -ibg">
+							<picture><source srcset="img/Slider/3.webp" type="image/webp"><img src="img/Slider/3.png" alt=""></picture>
+						</div>
+						<div class="gallery__slide swiper-slide image-slider -ibg">
+							<picture><source srcset="img/Slider/1.webp" type="image/webp"><img src="img/Slider/1.png" alt=""></picture>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+
+			<section class="page__contacts">
+				<div class="contacts__container">
+					<div class="contacts__content">
+
+						<div class="contacts__info-body">
+							<div class="contacts__title">
+								<h2>Contacts</h2>
+							</div>
+							<div class="contacts__info-items">
+
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/phone-contacts.svg" alt="">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Phone Number</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>+32 9 282 57 25</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/email-contacts.svg" alt="">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Email</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>info@email.com</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/clocks-contacts.svg" alt="">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Opening Hours</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>Everyday from 6 AM - 9 PM</p>
+										</div>
+									</div>
+								</div>
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/map-contacts.svg" alt="">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Map Street</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>Jl. Raya Surabaya 2787</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="contacts__form form-contacts">
+
+							<form data-popup-message="#form-message" data-dev action="files/sendmail/sendmail.php" method="POST">
+								<div class="contacts__title">
+									<h2>have any questions?</h2>
+								</div>
+								<div class="form__item">
+
+									<label for="formName" class="form__label">Name</label>
+									<input data-error="Вы ничего не ввели.." data-validate id="formName" type="text" name="name" placeholder="Input your name" class="form__input">
+								</div>
+
+								<div class="form__item">
+									<label for="formEmail" class="form__label">Email*:</label>
+									<input data-error="Введен неверный E-mail" data-validate data-required="email" id="formEmail" placeholder="Input your email" type="text" name="email" class="form__input">
+								</div>
+
+								<div class="form__item">
+									<label for="formMessage" class="form__label">Special Request</label>
+									<textarea data-autoheight name="message" placeholder="Input your special request" id="formMessage" class="form__input"></textarea>
+								</div>
+								<button type="submit" class="button contacts__button">Send</button>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230926213111"></script>
+</body>
+
+</html>
