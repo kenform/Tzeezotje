@@ -25,3 +25,32 @@
     });
   }
 })();
+
+
+/* tz-final-restaurant-polish */
+(() => {
+  const sticky = document.querySelector('.tz-sticky-reserve');
+  const reservation = document.getElementById('reservation');
+
+  if (!sticky || !reservation) return;
+
+  const toggleSticky = () => {
+    if (window.innerWidth > 767) {
+      sticky.style.opacity = '0';
+      sticky.style.pointerEvents = 'none';
+      return;
+    }
+
+    const reservationTop = reservation.getBoundingClientRect().top + window.scrollY;
+    const current = window.scrollY;
+    const shouldShow = current > 420 && current < reservationTop - 220;
+
+    sticky.style.opacity = shouldShow ? '1' : '0';
+    sticky.style.pointerEvents = shouldShow ? 'auto' : 'none';
+  };
+
+  sticky.style.transition = 'opacity .22s ease, transform .22s ease';
+  toggleSticky();
+  window.addEventListener('scroll', toggleSticky, { passive: true });
+  window.addEventListener('resize', toggleSticky);
+})();
