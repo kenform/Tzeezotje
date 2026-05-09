@@ -1,0 +1,377 @@
+
+/* Tzeezotje polish layer: original style + light UX/performance improvements */
+:root {
+  --tz-ink: #24150f;
+  --tz-muted: #6f6259;
+  --tz-warm: #d3a457;
+  --tz-warm-dark: #8f3f20;
+  --tz-bg: #fff8ef;
+  --tz-line: rgba(87, 50, 24, .14);
+  --tz-shadow: 0 24px 70px rgba(93, 55, 27, .12);
+  --tz-radius: 26px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.tz-bg-shapes {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.tz-shape {
+  position: absolute;
+  display: block;
+  opacity: .45;
+  border: 1px solid rgba(211, 164, 87, .28);
+  background: rgba(211, 164, 87, .10);
+  box-shadow: 0 18px 50px rgba(143, 63, 32, .08);
+  animation: tzFloat 16s ease-in-out infinite;
+}
+
+.tz-shape--one {
+  width: 42px;
+  height: 42px;
+  left: 5%;
+  top: 18%;
+  border-radius: 13px;
+  transform: rotate(18deg);
+}
+
+.tz-shape--two {
+  width: 86px;
+  height: 86px;
+  right: 6%;
+  top: 28%;
+  border-radius: 999px;
+  animation-delay: 2s;
+}
+
+.tz-shape--three {
+  width: 58px;
+  height: 58px;
+  left: 9%;
+  bottom: 15%;
+  border-radius: 18px;
+  animation-delay: 4s;
+}
+
+.tz-shape--four {
+  width: 34px;
+  height: 34px;
+  right: 18%;
+  bottom: 18%;
+  border-radius: 999px;
+  animation-delay: 1s;
+}
+
+@keyframes tzFloat {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 0 -14px; rotate: 5deg; }
+}
+
+.header {
+  z-index: 20;
+}
+
+img {
+  max-width: 100%;
+}
+
+.tz-gallery-lite,
+.tz-reservation-lite {
+  position: relative;
+  z-index: 1;
+  padding: clamp(56px, 8vw, 110px) 0;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(211, 164, 87, .13), transparent 28%),
+    radial-gradient(circle at 92% 14%, rgba(143, 63, 32, .08), transparent 30%),
+    #fff8ef;
+}
+
+.tz-gallery-lite__container,
+.tz-reservation-lite__container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.tz-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--tz-warm-dark);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: .24em;
+}
+
+.tz-section-label::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--tz-warm);
+  box-shadow: 0 0 0 8px rgba(211, 164, 87, .18);
+}
+
+.tz-section-title {
+  max-width: 760px;
+  margin: 0 0 22px;
+  color: var(--tz-ink);
+  font-weight: 800;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: .98;
+  letter-spacing: -.05em;
+}
+
+.tz-section-text {
+  max-width: 760px;
+  margin: 0 0 40px;
+  color: var(--tz-muted);
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.65;
+}
+
+.tz-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.tz-gallery-grid picture {
+  display: block;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: var(--tz-shadow);
+  background: #ead9c4;
+}
+
+.tz-gallery-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform .45s ease;
+}
+
+.tz-gallery-grid picture:hover img {
+  transform: scale(1.035);
+}
+
+.tz-reservation-lite__container {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(320px, .85fr);
+  gap: clamp(26px, 5vw, 70px);
+  align-items: start;
+  padding: clamp(28px, 5vw, 54px);
+  border: 1px solid var(--tz-line);
+  border-radius: var(--tz-radius);
+  background: rgba(255, 252, 247, .82);
+  box-shadow: var(--tz-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.tz-contact-pills {
+  display: grid;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.tz-contact-pills a,
+.tz-contact-pills span {
+  display: block;
+  padding: 18px 22px;
+  border: 1px solid var(--tz-line);
+  border-radius: 16px;
+  color: var(--tz-ink);
+  background: rgba(255, 248, 239, .8);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tz-form {
+  display: grid;
+  gap: 18px;
+}
+
+.tz-form label {
+  display: grid;
+  gap: 9px;
+  color: var(--tz-ink);
+  font-weight: 700;
+}
+
+.tz-form input,
+.tz-form textarea {
+  width: 100%;
+  border: 1px solid var(--tz-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .88);
+  padding: 18px 20px;
+  color: var(--tz-ink);
+  font: inherit;
+  outline: none;
+}
+
+.tz-form textarea {
+  min-height: 124px;
+  resize: vertical;
+}
+
+.tz-form input:focus,
+.tz-form textarea:focus {
+  border-color: rgba(211, 164, 87, .72);
+  box-shadow: 0 0 0 4px rgba(211, 164, 87, .16);
+}
+
+.tz-form button {
+  min-height: 56px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #913c1f, #d49a42);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 16px 36px rgba(143, 63, 32, .20);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.tz-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 46px rgba(143, 63, 32, .24);
+}
+
+.tz-form-note {
+  margin: 0;
+  color: var(--tz-muted);
+  font-weight: 600;
+}
+
+/* лёгкая страховка мобильной версии старого сайта */
+@media (max-width: 991.98px) {
+  .tz-gallery-grid,
+  .tz-reservation-lite__container {
+    grid-template-columns: 1fr;
+  }
+
+  .tz-gallery-grid picture,
+  .tz-gallery-grid img {
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tz-gallery-lite,
+  .tz-reservation-lite {
+    padding: 46px 0;
+  }
+
+  .tz-gallery-lite__container,
+  .tz-reservation-lite__container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .tz-reservation-lite__container {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-radius: 22px;
+  }
+
+  .tz-section-label {
+    justify-content: center;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .tz-section-title,
+  .tz-section-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tz-section-title {
+    font-size: clamp(32px, 10vw, 46px);
+  }
+
+  .tz-section-text {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .tz-contact-pills {
+    text-align: center;
+  }
+
+  .tz-form button {
+    width: 100%;
+  }
+
+  .tz-shape {
+    opacity: .25;
+  }
+
+  .tz-shape--two,
+  .tz-shape--four {
+    display: none;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .tz-gallery-lite__container,
+  .tz-reservation-lite__container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tz-gallery-grid {
+    gap: 14px;
+  }
+
+  .tz-gallery-grid picture,
+  .tz-gallery-grid img {
+    min-height: 210px;
+    border-radius: 18px;
+  }
+
+  .tz-reservation-lite__container {
+    padding: 22px 14px;
+  }
+
+  .tz-contact-pills a,
+  .tz-contact-pills span,
+  .tz-form input,
+  .tz-form textarea {
+    border-radius: 15px;
+    padding: 15px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tz-shape,
+  .tz-gallery-grid img,
+  .tz-form button {
+    animation: none !important;
+    transition: none !important;
+  }
+}

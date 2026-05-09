@@ -1,243 +1,581 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tzeezotje — modern restaurant landing</title>
-  <meta name="description" content="A warm responsive restaurant landing page with menu, events, gallery, reservation and contacts.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preload" as="image" href="img/Main-block/background.webp">
-  <link rel="stylesheet" href="restaurant-redesign.css">
+	<title>Tzeezotje — Restaurant in Ghent</title>
+	<meta name="description" content="A warm restaurant landing page with menu, atmosphere, gallery, reservation and contacts.">
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230926213111">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="stylesheet" href="tzeezotje-polish.css">
 </head>
+
 <body>
-  <div class="site-shell">
-    <header class="header">
-      <a class="logo" href="#home" aria-label="Tzeezotje home">
-        <span class="logo-mark">T</span>
-        <span class="logo-text">Tzeezotje</span>
-      </a>
+	<div class="tz-bg-shapes" aria-hidden="true">
+		<span class="tz-shape tz-shape--one"></span>
+		<span class="tz-shape tz-shape--two"></span>
+		<span class="tz-shape tz-shape--three"></span>
+		<span class="tz-shape tz-shape--four"></span>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<picture><source srcset="img/logo-header.webp" type="image/webp"><img src="img/logo-header.png" alt="Logo" /></picture>
+				</a>
 
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#menu">Menu</a>
-        <a href="#dishes">Dishes</a>
-        <a href="#events">Events</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contacts">Contacts</a>
-      </nav>
+				<div class="header__menu menu">
 
-      <a class="header-cta" href="#reservation">Book a table</a>
-    </header>
+					<div data-da=".header__container,767.98" type="button" class="menu__icon icon-menu burger cross menu--1 ">
 
-    <main>
-      <section class="hero" id="home">
-        <div class="hero-content">
-          <div class="eyebrow"><span></span> Fine dining restaurant</div>
-          <h1>Warm evenings, honest food and a table worth remembering.</h1>
-          <p>
-            Tzeezotje is a modern restaurant landing page with a calm premium feel, clear menu blocks, events, gallery and an easy reservation flow.
-          </p>
+						<label>
+							<input type="checkbox">
+							<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="50" cy="50" r="30" />
+								<path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+								<path class="line--2" d="M0 50h70" />
+								<path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+							</svg>
+						</label>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#reservation">Reserve a table</a>
-            <a class="btn btn-secondary" href="#menu">View menu</a>
-          </div>
 
-          <div class="hero-facts">
-            <div><strong>Tue–Sun</strong><span>12:00 — 23:00</span></div>
-            <div><strong>Ghent</strong><span>Belgium restaurant</span></div>
-            <div><strong>+32 9 282 57 25</strong><span>Reservations</span></div>
-          </div>
-        </div>
+					</div>
 
-        <div class="hero-visual">
-          <picture>
-            <source srcset="img/Main-block/background.webp" type="image/webp">
-            <img src="img/Main-block/background.jpg" alt="Restaurant interior">
-          </picture>
-          <div class="hero-card">
-            <strong>Seasonal chef menu</strong>
-            <span>Signature dishes, wine pairing and private events.</span>
-          </div>
-        </div>
-      </section>
 
-      <section class="section intro" id="menu">
-        <div class="section-head">
-          <div class="eyebrow"><span></span> Menu</div>
-          <h2>A simple menu structure that feels premium, not overloaded.</h2>
-          <p>We replaced heavy sliders and old blocks with readable cards, strong spacing and clear actions.</p>
-        </div>
-
-        <div class="menu-grid">
-          <article class="card menu-card">
-            <span>À la carte</span>
-            <h3>Signature classics</h3>
-            <p>Balanced restaurant dishes, seasonal ingredients and a calm dining experience.</p>
-          </article>
-          <article class="card menu-card">
-            <span>Lunch</span>
-            <h3>Day menu</h3>
-            <p>Light lunch options for weekdays, meetings and slow afternoons.</p>
-          </article>
-          <article class="card menu-card">
-            <span>Wine</span>
-            <h3>Wine pairing</h3>
-            <p>A thoughtful wine list for dinner, tasting evenings and private events.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section dishes" id="dishes">
-        <div class="section-head">
-          <div class="eyebrow"><span></span> Dishes</div>
-          <h2>Food that looks clean and appetizing on every screen.</h2>
-        </div>
-
-        <div class="dish-list">
-          <article class="dish-card card">
-            <picture>
-              <source srcset="img/Dishes/1.webp" type="image/webp">
-              <img src="img/Dishes/1.png" alt="Restaurant dish">
-            </picture>
-            <div>
-              <span>Starter</span>
-              <h3>Fresh seasonal plate</h3>
-              <p>A light dish focused on texture, freshness and warm restaurant presentation.</p>
-            </div>
-          </article>
-
-          <article class="dish-card card">
-            <picture>
-              <source srcset="img/Dishes/2.webp" type="image/webp">
-              <img src="img/Dishes/2.png" alt="Restaurant dish">
-            </picture>
-            <div>
-              <span>Main</span>
-              <h3>Chef’s main course</h3>
-              <p>Comforting, elegant and easy to read visually — no heavy old layout.</p>
-            </div>
-          </article>
-
-          <article class="dish-card card">
-            <picture>
-              <source srcset="img/Dishes/3.webp" type="image/webp">
-              <img src="img/Dishes/3.png" alt="Restaurant dish">
-            </picture>
-            <div>
-              <span>Dessert</span>
-              <h3>Soft dessert finish</h3>
-              <p>A calm final accent for dinner, events and romantic evenings.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section events" id="events">
-        <div class="events-panel card">
-          <div>
-            <div class="eyebrow"><span></span> Events</div>
-            <h2>Private dinners and restaurant evenings.</h2>
-            <p>Use this section for tastings, live music nights, chef dinners, holidays and private reservations.</p>
-          </div>
-
-          <div class="event-list">
-            <div><strong>Wine evening</strong><span>Friday · 19:00</span></div>
-            <div><strong>Chef dinner</strong><span>Saturday · 20:00</span></div>
-            <div><strong>Private booking</strong><span>On request</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section gallery" id="gallery">
-        <div class="section-head">
-          <div class="eyebrow"><span></span> Gallery</div>
-          <h2>Atmosphere without heavy sliders.</h2>
-          <p>Static responsive gallery loads faster, works better on mobile and still keeps the restaurant mood.</p>
-        </div>
-
-        <div class="gallery-grid">
-          <picture>
-            <source srcset="img/Slider/1.webp" type="image/webp">
-            <img src="img/Slider/1.png" alt="Restaurant gallery">
-          </picture>
-          <picture>
-            <source srcset="img/Slider/2.webp" type="image/webp">
-            <img src="img/Slider/2.png" alt="Restaurant gallery">
-          </picture>
-          <picture>
-            <source srcset="img/Slider/3.webp" type="image/webp">
-            <img src="img/Slider/3.png" alt="Restaurant gallery">
-          </picture>
-        </div>
-      </section>
-
-      <section class="section reservation card" id="reservation">
-        <div class="reservation-info">
-          <div class="eyebrow"><span></span> Reservation</div>
-          <h2>Book a table without friction.</h2>
-          <p>Clear fields, visible contacts and a simple mobile-friendly layout. The form is front-end only for portfolio/demo use.</p>
-          <div class="contact-pills">
-            <a href="tel:+3292825725">+32 9 282 57 25</a>
-            <a href="mailto:info@tzeezotje.demo">info@tzeezotje.demo</a>
-            <span>Ghent, Belgium</span>
-          </div>
-        </div>
-
-        <form class="form" id="reservationForm">
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" placeholder="Your name" autocomplete="name">
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" placeholder="name@example.com" autocomplete="email">
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" placeholder="Date, time and guests"></textarea>
-          </label>
-          <button class="btn btn-primary" type="submit">Send request</button>
-          <p class="form-note" id="formNote" hidden>Thanks! This demo form is ready for backend integration.</p>
-        </form>
-      </section>
-
-      <section class="section contacts" id="contacts">
-        <div class="contacts-grid">
-          <article class="contact-card card">
-            <span>01</span>
-            <h3>Address</h3>
-            <p>Ghent, Belgium</p>
-          </article>
-          <article class="contact-card card">
-            <span>02</span>
-            <h3>Opening hours</h3>
-            <p>Tuesday — Sunday<br>12:00 — 23:00</p>
-          </article>
-          <article class="contact-card card">
-            <span>03</span>
-            <h3>Phone</h3>
-            <p><a href="tel:+3292825725">+32 9 282 57 25</a></p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div>
-        <a class="footer-logo" href="#home">Tzeezotje</a>
-        <p>Modern restaurant landing page with clean responsive UI.</p>
-      </div>
-      <nav>
-        <a href="#menu">Menu</a>
-        <a href="#dishes">Dishes</a>
-        <a href="#reservation">Book</a>
-        <a href="#contacts">Contacts</a>
-      </nav>
-      <span>© 2026 Tzeezotje</span>
-    </footer>
+					<!-- <div class="burger cross menu--2">
+  	<label>
+  		<input type="checkbox">
+  		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  			<circle cx="50" cy="50" r="30" />
+  			<path class="line--1" d="M0 70l28-28c2-2 2-2 7-2h64" />
+  			<path class="line--2" d="M0 50h99" />
+  			<path class="line--3" d="M0 30l28 28c2 2 2 2 7 2h64" />
+  		</svg>
+  	</label>
   </div>
+  <div class="burger back menu--3">
+  	<label>
+  		<input type="checkbox">
+  		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  			<circle cx="50" cy="50" r="30" />
+  			<path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55" />
+  			<path class="line--2" d="M0 50h80" />
+  			<path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45" />
+  		</svg>
+  	</label>
+  </div>
+  <div class="burger back menu--4">
+  	<label>
+  		<input type="checkbox">
+  		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  			<circle cx="50" cy="50" r="30" />
+  			<path class="line--1" d="M0 55l14-10c4.7-3.3 9-5 13-5h72" />
+  			<path class="line--2" d="M0 50h99" />
+  			<path class="line--3" d="M0 45l14 10c4.7 3.3 9 5 13 5h72" />
+  		</svg>
+  	</label>
+  </div> -->
 
-  <script src="restaurant-redesign.js"></script>
+
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li data-goto-header data-goto=".page__events" class="menu__item">
+								<a href="#" class="menu__link">
+									<span> À la carte</span></a>
+							</li>
+							<li data-goto-header data-goto=".page__reviews" class="menu__item">
+								<a href="#" class="menu__link">Wijnkaart</a>
+							</li>
+							<li data-goto-header data-goto=".page__dishes" class="menu__item">
+								<a href="#" class="menu__link">Lunchmenu</a>
+							</li>
+							<li data-goto-header data-goto=".page__contacts" class="menu__item"><a href="#" class="menu__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div data-da=".menu__body,767.98" class="header__actions actions-header">
+					<div class="actions-header__body">
+						<div class="actions-header__icon">
+							<img src="img/svg/phone-header.svg" alt="phone icon" / loading="lazy">
+						</div>
+						<a class="actions-header__phone" href="tel:+3292825725" alt="phone">+32 9 282 57 25</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close "><span class="icon-popup"></span></button>
+					<div class="popup__text">
+						<form data-popup-message="#form-message" data-dev action="files/sendmail/sendmail.php" method="POST" class="form__body">
+							<h1 class="form__title">Отправка данных на почту</h1>
+							<div class="form__item">
+
+								<label for="formName" class="form__label">Имя*:</label>
+								<input data-error="Вы ничего не ввели.." data-validate id="formName" type="text" name="name" class="form__input">
+							</div>
+
+							<div class="form__item">
+								<label for="formEmail" class="form__label">E-mail*:</label>
+								<input data-error="Введен неверный E-mail" data-validate data-required="email" id="formEmail" type="text" name="email" class="form__input">
+							</div>
+
+							<div class="form__item">
+								<label for="formMessage" class="form__label">Сообщение:</label>
+								<textarea data-autoheight name="message" id="formMessage" class="form__input"></textarea>
+							</div>
+
+							<div class="form__item">
+								<div class="checkbox">
+									<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных
+											данных в
+											соответствии с <a href="">Условиями</a>*</span></label>
+								</div>
+							</div>
+							<button type="submit" class="form__button">Send</button>
+
+						</form>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="form-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content _message">
+					<button data-close type="button" class="popup__close "><span class="icon-popup"></span></button>
+					<div class="popup__text">
+						<form data-popup-message="#form-message" method="POST" class="form__body">
+							<h1 class="form__title">Сообщение успешно отправлено!</h1>
+
+						</form>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<section class="page__main main-block">
+				<div class="main-block__container">
+					<div class="main-block__content">
+						<div class="main-block__shedule title">
+							<p>OPEN EVERYDAY 6AM - 9PM</p>
+						</div>
+						<div class="main-block__tagline">
+							<h1>
+								A bad day with lunch is better than a good day without it.
+							</h1>
+						</div>
+						<div class="main-block__actions actions-main">
+							<button data-popup="#popup" class="actions-main__button button button-open" type="submit" class="button">
+								Reserve a table
+
+							</button>
+
+							<div data-da=".menu__body,767.98" class="actions-main__socials socials-main">
+								<div class="socials-main__item">
+									<img src="img/svg/facebook-intro.svg" alt="icon facebook" / loading="lazy">
+								</div>
+								<div class="socials-main__item">
+									<img src="img/svg/instagram-intro.svg" alt="icon instagram" / loading="lazy">
+								</div>
+								<div class="socials-main__item">
+									<img src="img/svg/twitter-intro.svg" alt="icon twitter" / loading="lazy">
+								</div>
+								<div class="socials-main__item">
+									<img src="img/svg/Youtube-intro.svg" alt="icon youtube" / loading="lazy">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <button class="btn btn-primary btn-ghost btn-open">
+  	Open
+  </button>
+  <button class="btn btn-primary btn-ghost btn-close">
+  	Close
+  </button>
+  <button class="btn btn-primary btn-ghost btn-slash">
+  	Slash
+  </button>
+  <button class="btn btn-primary btn-ghost btn-fill-up">
+  	Fill Up
+  </button>
+  <button class="btn btn-primary btn-ghost btn-slide">
+  	Slide
+  </button>
+  <button class="btn btn-primary btn-ghost btn-through">
+  	Through
+  </button> -->
+			<section class="page__events events">
+				<div class="events__container">
+					<div class="events__content">
+						<div class="events__schedule schedule-events">
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Woensdag 12/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Salade met Serrano
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Steak Tartaar
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Donderdag 13/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Toast Roquefort
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Vrijdag 14/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Verrassing van de Chef
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Vrijdag 15/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Verrassing van de Chef
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+
+							<div class="schedule-events__item">
+								<div class="schedule-events__title">
+									<h4>Vrijdag 16/01</h4>
+								</div>
+								<div class="schedule-events__subtitle">
+									<p>
+										Verrassing van de Chef
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										Penne met Kip en Prei
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div data-coefficient="100" data-prlx data-direction="1" data-prlx-parent class="events__images image-block ">
+						<div data-prlx-mouse data-prlx-cx="300" data-prlx-cy="300" data-prlx-a="100" class="image-block__square">
+						</div>
+						<div data-prlx class="image-block__item_1 ">
+							<picture><source srcset="img/Events/1.webp" type="image/webp"><img src="img/Events/1.png" alt="Image" / loading="lazy"></picture>
+						</div>
+						<div data-prlx class="image-block__item_2 ">
+							<picture><source srcset="img/Events/2.webp" type="image/webp"><img src="img/Events/2.png" alt="Image" / loading="lazy"></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__reviews reviews">
+				<div class="reviews__container">
+					<!-- Оболонка слайдера -->
+					<div class="reviews__slider swiper swiper-reviews">
+						<!-- Частина слайдера, що рухається -->
+						<div class="reviews__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__content">
+									<div class="reviews__quotes">
+										<picture><source srcset="img/Reviews/quotes.webp" type="image/webp"><img src="img/Reviews/quotes.png" alt="" loading="lazy"></picture>
+									</div>
+									<h4 class="reviews__title">
+										Goede service, lekker eten, toffe ambiance
+										<h4 />
+										<div class="reviews__text">
+											<p>
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+												sed diam nonumy eirmod tempor invidunt ut labore et
+												dolore magna aliquyam erat, sed diam voluptua. At vero
+												eos et accusam et justo duo dolores et ea rebum. Stet
+												clita kasd gubergren.
+											</p>
+										</div>
+										<div class="reviews__author">
+											<p>ALAIN HEYNDRICKX</p>
+										</div>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__content">
+									<div class="reviews__quotes">
+										<picture><source srcset="img/Reviews/quotes.webp" type="image/webp"><img src="img/Reviews/quotes.png" alt="" loading="lazy"></picture>
+									</div>
+									<h4 class="reviews__title">
+										Goede service, lekker eten, toffe ambiance
+										<h4 />
+										<div class="reviews__text">
+											<p>
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+												sed diam nonumy eirmod tempor invidunt ut labore et
+												dolore magna aliquyam erat, sed diam voluptua. At vero
+												eos et accusam et justo duo dolores et ea rebum. Stet
+												clita kasd gubergren.
+											</p>
+										</div>
+										<div class="reviews__author">
+											<p>ALAIN HEYNDRICKX</p>
+										</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+						<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="page__dishes dishes">
+				<div class="dishes__container">
+					<div class="dishes__items">
+						<div data-prlx-parent class="dishes__item item-dishes">
+							<div class="item-dishes__body">
+								<h4 class="item-dishes__title">
+									LEKKER ETEN
+									<span></span>
+								</h4>
+								<div class="item-dishes__text">
+									<p>Eten gaat niet over indruk maken op mensen. Het gaat erom dat ze zich op hun gemak voelen. Dat is
+										onze
+										filosofie, goed eten in een goede sfeer.</p>
+								</div>
+							</div>
+							<div data-prlx class="item-dishes__image -ibg">
+								<picture><source srcset="img/Dishes/1.webp" type="image/webp"><img src="img/Dishes/1.png" alt="" loading="lazy"></picture>
+							</div>
+						</div>
+						<div data-prlx-parent class="dishes__item item-dishes">
+							<div class="item-dishes__body">
+								<h4 class="item-dishes__title">
+									TOFFE AMBIANCE
+									<span></span>
+								</h4>
+								<div class="item-dishes__text">
+									<p>Het creëren van de juiste sfeer is zeer belangrijk voor ons. We nemen onze tijd om te zorgen dat
+										alle
+										elementen bijdragen aan de juiste setting.</p>
+								</div>
+							</div>
+							<div data-prlx class="item-dishes__image -ibg">
+								<picture><source srcset="img/Dishes/2.webp" type="image/webp"><img src="img/Dishes/2.png" alt="" loading="lazy"></picture>
+							</div>
+						</div>
+						<div data-prlx-parent class="dishes__item item-dishes">
+							<div class="item-dishes__body">
+								<h4 class="item-dishes__title">
+									LEKKERE COCKTAILS
+									<span></span>
+								</h4>
+								<div class="item-dishes__text">
+									<p>Ons doel is simpel: een gastvrije plek bieden waar u kunt genieten van een onvergetelijke cocktail,
+										een goed
+										gesprek en lekker eten.</p>
+								</div>
+							</div>
+							<div data-prlx class="item-dishes__image -ibg">
+								<picture><source srcset="img/Dishes/3.webp" type="image/webp"><img src="img/Dishes/3.png" alt="" loading="lazy"></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__gallery tz-gallery-lite">
+				<div class="tz-gallery-lite__container">
+					<div class="tz-section-label">GALLERY</div>
+					<h2 class="tz-section-title">Sfeerfoto's</h2>
+					<p class="tz-section-text">De beste manier om de sfeer te ervaren is eens langskomen. In tussentijd staan hier alvast een paar foto’s klaar.</p>
+					<div class="tz-gallery-grid">
+						<picture><source srcset="img/Slider/1.webp" type="image/webp"><img src="img/Slider/1.png" alt="Restaurant atmosphere" loading="lazy"></picture>
+						<picture><source srcset="img/Slider/2.webp" type="image/webp"><img src="img/Slider/2.png" alt="Restaurant interior" loading="lazy"></picture>
+						<picture><source srcset="img/Slider/3.webp" type="image/webp"><img src="img/Slider/3.png" alt="Restaurant table" loading="lazy"></picture>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="page__contacts">
+				<div class="contacts__container">
+					<div class="contacts__content">
+
+						<div class="contacts__info-body">
+							<div class="contacts__title">
+								<h2>Contacts</h2>
+							</div>
+							<div class="contacts__info-items">
+
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/phone-contacts.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Phone Number</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>+32 9 282 57 25</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/email-contacts.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Email</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>info@email.com</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/clocks-contacts.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Opening Hours</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>Everyday from 6 AM - 9 PM</p>
+										</div>
+									</div>
+								</div>
+								<div class="contacts__info-item item-contacts">
+									<div class="item-contacts__icon">
+										<img src="img/svg/map-contacts.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="item-contacts__body">
+										<div class="item-contacts__title">
+											<p>Map Street</p>
+										</div>
+										<div class="item-contacts__text">
+											<p>Jl. Raya Surabaya 2787</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="contacts__form form-contacts">
+
+							<form data-popup-message="#form-message" data-dev action="files/sendmail/sendmail.php" method="POST">
+								<div class="contacts__title">
+									<h2>have any questions?</h2>
+								</div>
+								<div class="form__item">
+
+									<label for="formName" class="form__label">Name</label>
+									<input data-error="Вы ничего не ввели.." data-validate id="formName" type="text" name="name" placeholder="Input your name" class="form__input">
+								</div>
+
+								<div class="form__item">
+									<label for="formEmail" class="form__label">Email*:</label>
+									<input data-error="Введен неверный E-mail" data-validate data-required="email" id="formEmail" placeholder="Input your email" type="text" name="email" class="form__input">
+								</div>
+
+								<div class="form__item">
+									<label for="formMessage" class="form__label">Special Request</label>
+									<textarea data-autoheight name="message" placeholder="Input your special request" id="formMessage" class="form__input"></textarea>
+								</div>
+								<button type="submit" class="button contacts__button">Send</button>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		
+			<section class="tz-reservation-lite" id="reservation">
+				<div class="tz-reservation-lite__container">
+					<div class="tz-reservation-lite__info">
+						<div class="tz-section-label">RESERVATION</div>
+						<h2 class="tz-section-title">Reserve a table</h2>
+						<p class="tz-section-text">Clear fields, visible contacts and a simple mobile-friendly layout. This demo form is ready for backend integration.</p>
+						<div class="tz-contact-pills">
+							<a href="tel:+3292825725">+32 9 282 57 25</a>
+							<a href="mailto:info@tzeezotje.demo">info@tzeezotje.demo</a>
+							<span>Ghent, Belgium</span>
+						</div>
+					</div>
+					<form class="tz-form" id="reservationForm">
+						<label><span>Name</span><input type="text" name="name" placeholder="Your name" autocomplete="name"></label>
+						<label><span>Email</span><input type="email" name="email" placeholder="name@example.com" autocomplete="email"></label>
+						<label><span>Message</span><textarea name="message" placeholder="Date, time and guests"></textarea></label>
+						<button type="submit">Send request</button>
+						<p class="tz-form-note" hidden>Thanks! This demo form is ready for backend integration.</p>
+					</form>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230926213111"></script>
+	<script src="tzeezotje-polish.js"></script>
 </body>
+
 </html>
